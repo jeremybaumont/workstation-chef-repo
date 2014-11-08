@@ -28,6 +28,10 @@
         "revision": "HEAD"
       }
     */
+    ".bashrc.d": {
+      "repo": "git@github.com:jeremybaumont/dot-bashrc.d.git",
+      "revision": "HEAD"
+    },
     "Devel/opscode/chef-client": {
       "repo": "git@github.com:jeremybaumont/chef-client.git", // your fork of Chef
       "revision": "HEAD"
@@ -45,13 +49,13 @@
       }
      */
     // Examples:
+    ".bash_profile": {
+      "mode": "0644",
+      "source": "dotfiles/dot-bash_profile"
+    },
     ".bashrc": {
       "mode": "0644",
-      "source": "dot-bashrc"
-    },
-    ".gemrc": {
-      "mode": "0644",
-      "source": "dot-gemrc"
+      "source": "dotfiles/dot-bashrc"
     }
   }
 }

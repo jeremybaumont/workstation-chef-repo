@@ -61,6 +61,18 @@ if u.has_key?("repos")
   end
 end
 
+if u.has_key?("files")
+  u["files"].each do |target, file|
+
+    cookbook_file "#{ENV['HOME']}/#{target}" do
+      mode file['mode']
+      source file['source']
+      owner u['id']
+    end
+
+  end
+end
+
 case node['platform']
 when "mac_os_x"
 

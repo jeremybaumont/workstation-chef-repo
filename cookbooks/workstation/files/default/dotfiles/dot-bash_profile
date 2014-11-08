@@ -1,0 +1,11 @@
+# ~/.bash_profile: executed by bash(1) for login shells.
+
+if [ -d ~/.bashrc.d ]; then
+	for f in `ls ~/.bashrc.d/.bash*`;do source  $f; done
+fi
+
+### PATH
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ] ; then
+    PATH=~/bin:"${PATH}"
+fi
