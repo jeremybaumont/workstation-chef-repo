@@ -1,0 +1,6 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook "build-essential", "~> 2.0.6"
+cookbook "homebrew", "~> 1.9.2"

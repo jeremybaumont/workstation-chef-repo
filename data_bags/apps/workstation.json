@@ -1,0 +1,51 @@
+{
+  "id": "workstation",
+  "dmgs": {
+    // Applications installed using the dmg_package LWRP.
+    "Adium": {
+      "volumes_dir": "Adium 1.4.2",
+      "url": "http://download.adium.im/Adium_1.4.2.dmg",
+      "checksum": "c504c84122433dc4fcc48a05dcb6b6f3e325527e5ee3c2ef2a2c35de11b6aeb3"
+    },
+    "KeePassX": {
+      "volumes_dir": "KeePassX",
+      "url": "http://www.keepassx.org/dev/attachments/download/72/KeePassX-2.0-alpha6.dmg",
+      "checksum": "55aeaba8257d728b62ba173ba56df27897552737a556dc1e4e4ed6dcd3d6dd8a"
+    }
+  },
+  "plists": [
+    // Array of plist file names that get dropped off in
+    // ~/Library/Preferences via mac_os_x_plist
+
+  ],
+  // List of packages and their versions (if any) installed on Linux
+  // systems. These may be different package names than on Homebrew,
+  // so brew installed packages are separate.
+  "packages": {
+    "ack-grep": "",
+    "coreutils": "",
+    "nmap": "",
+    "tree": "",
+    "wget": ""
+  },
+  // Packages that are installed by Homebrew.
+  "brew_packages": {
+    "ack": "",
+   "coreutils": "",
+    "md5sha1sum": "",
+    "openvpn": "",
+    "parallel": "",
+    "pstree": "",
+    "sloccount": "",
+    "tree": "",
+    "tmux": "",
+    "wget": ""
+  },
+  "dirs": [
+    // Array of directories that are created in $HOME. Create parent
+    // directories of repositories or files for the user here, e.g.:
+    "bin",
+    "Devel",
+    "Devel/opscode"
+  ]
+}
