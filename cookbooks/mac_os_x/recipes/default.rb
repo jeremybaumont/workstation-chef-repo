@@ -18,3 +18,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# Disable startup sound
+flag_filename = ".disabled.startup.sound"
+flag_filepath = "#{Chef::Config['file_cache_path']}/#{flag_filename}"
+
+bash 'disable_startup_sound' do
+  user "root"
+  cwd ::File.dirname(flag_filepath)
+  code <<-EOH
+    nvram SystemAudioVolume=%80
+    EOH
+  not_if { ::File.exists?(flag_filepath) }
+end
