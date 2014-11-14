@@ -61,6 +61,10 @@
       "mode": "0644",
       "source": "dotfiles/dot-bashrc"
     },
+    ".vimrc": {
+      "mode": "0644",
+      "source": "dotfiles/dot-vimrc"
+    },
     ".tmux.conf": {
       "mode": "0644",
       "source": "dotfiles/dot-tmux.conf"

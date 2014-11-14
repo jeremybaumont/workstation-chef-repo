@@ -1,0 +1,169 @@
+" avoid warning for wrong version :
+version 4.0
+
+" Pathogen
+execute pathogen#infect()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+syntax on
+filetype plugin indent on
+" filetype off " Pathogen needs to run before plugin indent on
+" call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+" filetype plugin indent on
+
+
+set laststatus=2
+set statusline=%{GitBranch()}
+
+" ensure file type plugin and indentation are taken in account when
+" vim start
+filetype plugin indent on
+
+" vimgdb init parameters
+set previewheight=12               " set gdb window initial height
+run macros/gdb_mappings.vim        " source key mappings in helpvimgdb
+set t_Co=256
+set et
+set sw=4
+
+" disable visual/error bells
+set vb t_vb=
+set eb t_eb=
+
+" Use Vim defaults (much better!)
+set nocompatible
+
+" allow backspacing over everything in insert mode
+set bs=2
+
+" always limit the width of text to :
+set tw=82
+
+" indent mode :
+set cindent
+
+" mouse setting :
+"set mouse=a
+
+" line warping :
+set nowrapscan
+
+" show matching :
+set showmatch
+
+" and mode :
+set showmode
+
+" set smartindent :
+" set uc=0
+
+" Make delete & backspace work :
+set t_kD=^?
+
+" Must be after setting t_kD :
+map ^H X
+
+" Make DEL work :
+map [3~ x
+
+" Switch on search pattern highlighting :
+" set hlsearch
+
+" I like highlighting strings inside C comments :
+let c_comment_strings=1
+
+
+
+
+" Color syntax hilighting :
+syntax on
+
+" Enable editing of gzipped files
+"       read: set binary mode before reading the file
+"             uncompress text in buffer after reading
+"      write: compress file after writing
+"     append: uncompress file, append, compress file
+
+augroup gzip
+ " Remove all gzip autocommands
+  au!
+  autocmd BufReadPre,FileReadPre        *.gz set bin
+  autocmd BufReadPost,FileReadPost      *.gz '[,']!gunzip
+  autocmd BufReadPost,FileReadPost      *.gz set nobin
+  autocmd BufReadPost,FileReadPost      *.gz execute ":doautocmd BufReadPost " .  expand("%:r")
+
+  autocmd BufWritePost,FileWritePost    *.gz !mv <afile> <afile>:r
+  autocmd BufWritePost,FileWritePost    *.gz !gzip <afile>:r
+
+  autocmd FileAppendPre                 *.gz !gunzip <afile>
+  autocmd FileAppendPre                 *.gz !mv <afile>:r <afile>
+  autocmd FileAppendPost                *.gz !mv <afile> <afile>:r
+  autocmd FileAppendPost                *.gz !gzip <afile>:r
+augroup END
+
+augroup bzip
+  " Remove all bzip autocommands
+  au!
+  autocmd BufReadPre,FileReadPre        *.bz2 set bin
+  autocmd BufReadPost,FileReadPost      *.bz2 '[,']!bunzip2
+  autocmd BufReadPost,FileReadPost      *.bz2 set nobin
+  autocmd BufReadPost,FileReadPost      *.bz2 execute ":doautocmd BufReadPost " .  expand("%:r")
+
+  autocmd BufWritePost,FileWritePost    *.bz2 !mv <afile> <afile>:r
+  autocmd BufWritePost,FileWritePost    *.bz2 !bzip2 <afile>:r
+
+  autocmd FileAppendPre                 *.bz2 !bunzip2 <afile>
+  autocmd FileAppendPre                 *.bz2 !mv <afile>:r <afile>
+  autocmd FileAppendPost                *.bz2 !mv <afile> <afile>:r
+  autocmd FileAppendPost                *.bz2 !bzip2 <afile>:r
+augroup END
+
+augroup cprog
+  " Remove all cprog autocommands
+  au!
+
+  " When starting to edit a file:
+  "   For *.c and *.h files set formatting of comments and set C-indenting on.
+  "   For other files switch it off.
+  "   Don't change the order, it's important that the line with * comes first.
+  autocmd BufRead *       set formatoptions=tcql nocindent comments&
+  autocmd BufRead *.c,*.h set formatoptions=croql cindent comments=sr:/*,mb:*,el:*/,://
+augroup END
+
+
+" if you do not want to have problem with tab and makefile
+set noexpandtab
+
+" column and line numbers
+set ruler
+set nu
+
+
+" more informative status line
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+" colorscheme  
+colorscheme  pychimp 
+
+" Json
+augroup json_autocmd 
+  autocmd! 
+  autocmd FileType json set autoindent 
+  autocmd FileType json set formatoptions=tcq2l 
+  autocmd FileType json set textwidth=78 shiftwidth=2 
+  autocmd FileType json set softtabstop=2 tabstop=8 
+  autocmd FileType json set expandtab 
+  autocmd FileType json set foldmethod=syntax 
+augroup END 
+
+" Go
+filetype off
+filetype plugin indent off
+set runtimepath+=/opt/google/go/misc/vim
+filetype plugin indent on
+syntax on
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+" Syntastic
+let g:syntastic_go_checkers=['gofmt']
