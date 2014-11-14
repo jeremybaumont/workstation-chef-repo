@@ -32,6 +32,10 @@
       "repo": "git@github.com:jeremybaumont/dot-bashrc.d.git",
       "revision": "HEAD"
     },
+    "bin": {
+      "repo": "git@github.com:jeremybaumont/bin.git",
+      "revision": "HEAD"
+    },
     "Devel/opscode/chef-client": {
       "repo": "git@github.com:jeremybaumont/chef-client.git", // your fork of Chef
       "revision": "HEAD"
