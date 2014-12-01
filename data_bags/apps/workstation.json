@@ -27,7 +27,7 @@
     "nmap": "",
     "tree": "",
     "wget": ""
-  },
+ },
   // Packages that are installed by Homebrew.
   "brew_packages": {
     "ack": "",
@@ -39,7 +39,8 @@
     "sloccount": "",
     "tree": "",
     "tmux": "",
-    "wget": ""
+    "wget": "",
+    "mutt": ""
   },
   "dirs": [
     // Array of directories that are created in $HOME. Create parent

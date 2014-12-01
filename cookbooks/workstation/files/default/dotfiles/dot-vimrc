@@ -167,3 +167,6 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Syntastic
 let g:syntastic_go_checkers=['gofmt']
+
+" Unfold json by default
+set nofoldenable

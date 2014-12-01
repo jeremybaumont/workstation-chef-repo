@@ -41,7 +41,7 @@
       "revision": "HEAD"
     },
     "Devel/opscode/chef-client": {
-      "repo": "git@github.com:jeremybaumont/chef-client.git", // your fork of Chef
+      "repo": "git@github.com:jeremybaumont/chef-client.git", 
       "revision": "HEAD"
     }
   },
