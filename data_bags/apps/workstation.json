@@ -40,7 +40,8 @@
     "tree": "",
     "tmux": "",
     "wget": "",
-    "mutt": ""
+    "mutt": "",
+    "python": ""
   },
   "dirs": [
     // Array of directories that are created in $HOME. Create parent
