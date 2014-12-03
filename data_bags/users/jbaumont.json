@@ -57,6 +57,10 @@
       }
      */
     // Examples:
+    ".bashrc.d/.bash_sbp": {
+      "mode": "0644",
+      "source": "dotfiles/dot-bash_sbp"
+    },
     ".bash_profile": {
       "mode": "0644",
       "source": "dotfiles/dot-bash_profile"
