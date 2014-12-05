@@ -41,7 +41,8 @@
     "tmux": "",
     "wget": "",
     "mutt": "",
-    "python": ""
+    "python": "",
+    "reattach-to-user-namespace": ""
   },
   "dirs": [
     // Array of directories that are created in $HOME. Create parent
