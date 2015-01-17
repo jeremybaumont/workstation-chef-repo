@@ -73,6 +73,10 @@
       "mode": "0644",
       "source": "dotfiles/dot-vimrc"
     },
+    ".gemrc": {
+      "mode": "0644",
+      "source": "dotfiles/dot-gemrc"
+    },
     ".tmux.conf": {
       "mode": "0644",
       "source": "dotfiles/dot-tmux.conf"
