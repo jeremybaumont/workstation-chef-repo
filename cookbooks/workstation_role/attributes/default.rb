@@ -1,3 +1,8 @@
+force_default['git']['osx_dmg']['url'] = "http://downloads.sourceforge.net/project/git-osx-installer/git-2.2.1-intel-universal-mavericks.dmg"
+force_default['git']['osx_dmg']['app_name']    = 'git-2.2.1-intel-universal-mavericks'
+force_default['git']['osx_dmg']['volumes_dir'] = 'Git 2.2.1 Mavericks Intel Universal'
+force_default['git']['osx_dmg']['package_id']  = 'git-2.2.1-intel-universal-mavericks.pkg'
+force_default['git']['osx_dmg']['checksum']    = '5350547ecdf07b15d01d0cfe9e10872a'
 
 force_default['iterm2'] = {
   "tmux_enabled" => false,
