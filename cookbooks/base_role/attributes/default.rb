@@ -31,7 +31,13 @@ override['rbenv'] = {
     "user_installs" => [
       {
         "user" => "jbaumont",
-        "rubies" => ["2.1.1"],
+        "rubies" => [
+	    {
+		:name => "2.1.1",
+		:environment => {
+		}
+	    }	
+	],
         "global" => "2.1.1",
         "gems" => {
           "2.1.1" => [
@@ -65,6 +71,8 @@ override['rbenv'] = {
             {"name" => "pry"},
             {"name" => "ubuntu_ami"},
             {"name" => "vagrant"},
+	    # Database
+	    #{"name" => "ruby-oci8"},
           ]
         }
       }
