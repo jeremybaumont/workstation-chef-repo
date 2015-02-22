@@ -24,7 +24,7 @@ set previewheight=12               " set gdb window initial height
 run macros/gdb_mappings.vim        " source key mappings in helpvimgdb
 set t_Co=256
 set et
-set sw=4
+set sw=2
 
 " disable visual/error bells
 set vb t_vb=
