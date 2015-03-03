@@ -40,6 +40,7 @@ when 'mac_os_x'
     checksum node['git']['osx_dmg']['checksum']
     type 'pkg'
     action :install
+    not_if "test #{node['git']['version']} == `git --version | cut -d ' ' -f3`"
   end
 else
   package 'git' do

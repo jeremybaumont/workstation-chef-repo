@@ -1,8 +1,14 @@
+#
+# Cookbook Name:: workstation_role
+# Attribute:: default
+#
+
 force_default['git']['osx_dmg']['url'] = "http://downloads.sourceforge.net/project/git-osx-installer/git-2.2.1-intel-universal-mavericks.dmg"
 force_default['git']['osx_dmg']['app_name']    = 'git-2.2.1-intel-universal-mavericks'
 force_default['git']['osx_dmg']['volumes_dir'] = 'Git 2.2.1 Mavericks Intel Universal'
 force_default['git']['osx_dmg']['package_id']  = 'git-2.2.1-intel-universal-mavericks.pkg'
-force_default['git']['osx_dmg']['checksum']    = '5350547ecdf07b15d01d0cfe9e10872a'
+force_default['git']['osx_dmg']['checksum']    = 'f9b1d926736a7d5dbcff2ffe0920ae25c03b9880d4e218e23e3c06c231ba6b63'
+force_default['git']['version'] = '2.2.1'
 
 force_default['iterm2'] = {
   "tmux_enabled" => false,

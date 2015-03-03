@@ -1,3 +1,4 @@
+name             'workstation'
 maintainer       "Joshua Timberman"
 maintainer_email "opensource@housepub.org"
 license          "Apache 2.0"
