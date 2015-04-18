@@ -1,0 +1,53 @@
+[color]
+            ui = true
+[user]
+            name = Jeremy Baumont
+	    email = jeremyb.baumont@gmail.com
+[core]
+    	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/jbaumont/.gitignore
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+
+[alias]
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate	
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	filelog = log -u
+	fl = log -u
+    	dl = "!git ll -1"
+    	dlc = diff --cached HEAD^
+    	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    	lcr  = "!f() { git ll "$1"^.."$1"; }; f"
+    	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+    	f = "!git ls-files | grep -i"
+    	la = "!git config -l | grep alias | cut -c 7-"
+    	cp = cherry-pick
+    	st = status -s
+    	cl = clone
+    	ci = commit
+    	co = checkout
+    	br = branch 
+    	diff = diff --word-diff
+    	dc = diff --cached
+[fetch]
+	recurseSubmodules = yes
+[http]
+	sslVerify = false

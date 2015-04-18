@@ -1,0 +1,13 @@
+.bash_history
+*.go~
+jeremyb.cfg
+.rvmrc
+*.bak
+.bash_logout
+*.o
+*.swp
+*.swo
+.gitmodules
+sg.html
+*.gem
+Berksfile.lock

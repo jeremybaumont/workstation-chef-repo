@@ -77,6 +77,14 @@
       "mode": "0644",
       "source": "dotfiles/dot-gemrc"
     },
+    ".gitconfig": {
+      "mode": "0644",
+      "source": "dotfiles/dot-gitconfig"
+    },
+    ".gitignore": {
+      "mode": "0644",
+      "source": "dotfiles/dot-gitignore"
+    },
     ".tmux.conf": {
       "mode": "0644",
       "source": "dotfiles/dot-tmux.conf"
