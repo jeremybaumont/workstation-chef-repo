@@ -25,24 +25,24 @@
       structure:
       "path_under_$HOME": {
         "repo": "git_url_to_repository",
-        "revision": "HEAD"
+        "branch": "deploy"
       }
     */
     ".bashrc.d": {
       "repo": "git@github.com:jeremybaumont/dot-bashrc.d.git",
-      "revision": "HEAD"
+      "branch": "deploy"
     },
     "bin": {
       "repo": "git@github.com:jeremybaumont/bin.git",
-      "revision": "HEAD"
+      "branch": "deploy"
     },
     ".vim": {
       "repo": "git@github.com:jeremybaumont/dot-vim.git",
-      "revision": "HEAD"
+      "branch": "deploy"
     },
     "Devel/opscode/chef-client": {
       "repo": "git@github.com:jeremybaumont/chef-client.git", 
-      "revision": "HEAD"
+      "branch": "master"
     }
   },
   "files": {

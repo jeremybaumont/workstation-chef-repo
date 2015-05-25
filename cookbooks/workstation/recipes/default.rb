@@ -53,7 +53,8 @@ if u.has_key?("repos")
 
     git "#{ENV['HOME']}/#{target}" do
       repository repo['repo']
-      reference repo['revision']
+      #reference repo['revision']
+      checkout_branch repo['branch']
       action :sync
       user u['id']
     end
