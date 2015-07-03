@@ -157,13 +157,23 @@ augroup json_autocmd
 augroup END 
 
 " Go
-filetype off
-filetype plugin indent off
-set runtimepath+=/opt/google/go/misc/vim
 filetype plugin indent on
 syntax on
-
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+let g:go_fmt_command = "goimports"
 
 " Syntastic
 let g:syntastic_go_checkers=['gofmt']
@@ -172,32 +182,6 @@ let g:syntastic_go_checkers=['gofmt']
 set nofoldenable
 
 " golang tagbar
-
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -225,3 +209,9 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+" supertab
+let g:SuperTabMappingTabLiteral='<s-tab>'
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<s-tab>'
+
