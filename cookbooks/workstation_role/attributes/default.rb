@@ -12,8 +12,8 @@ force_default['git']['version'] = '2.2.1'
 
 force_default['iterm2'] = {
   "tmux_enabled" => false,
-  "version" => "2_0_0_20141022",
-  "checksum" => "d2e16b172548bd0f08b7b1fa42f0b42f5781f4e2a6452e6ad21a24301b38577c",
+  "version" => "2_1_1",
+  "checksum" => "b8f1bbd11cdb3e26fd9fab6971c28ebeb422361b2cc5fd6e4a843836d5dedeb0",
   "tmux_compile" => false  
 }
 
