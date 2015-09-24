@@ -39,10 +39,6 @@
     ".vim": {
       "repo": "git@github.com:jeremybaumont/dot-vim.git",
       "branch": "deploy"
-    },
-    "Devel/opscode/chef-client": {
-      "repo": "git@github.com:jeremybaumont/chef-client.git", 
-      "branch": "master"
     }
   },
   "files": {

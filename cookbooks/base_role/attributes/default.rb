@@ -70,7 +70,6 @@ override['rbenv'] = {
             {"name" => "net-ssh-multi"},
             {"name" => "pry"},
             {"name" => "ubuntu_ami"},
-            {"name" => "vagrant"},
 	    # Database
 	    #{"name" => "ruby-oci8"},
           ]
